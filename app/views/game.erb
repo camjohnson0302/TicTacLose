@@ -1,0 +1,13 @@
+<table class="board">
+  <% (1..@board.size).each do |x| %>
+    <tr>
+      <% (1..@board.size).each do |y| %>
+        <td class="row_<%=x%> column_<%=y%>"></td>
+      <%end%>
+    </tr>
+  <%end%>
+</table>
+
+
+
+
