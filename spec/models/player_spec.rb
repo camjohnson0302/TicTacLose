@@ -43,9 +43,10 @@ describe "player" do
 
 	describe "#block" do
 		it "stops the opponent from winning" do
-			board = Board.create(size: 3)
-			player = Player.create()
-			player2 = Player.create(human: true)
+			game = Game.create()
+			board = Board.create(size: 3, game_id: game.id)
+			player = Player.create(game_id: game.id)
+			player2 = Player.create(game_id: game.id)
 			board.spaces.each do |space|
 				if space.index == 2 || space.index == 5
 					player2.spaces << space
@@ -88,9 +89,10 @@ describe "player" do
 
 	describe "#block_fork" do
 		it "stops the opponent from creating a fork" do
-			board = Board.create(size: 3)
-			player = Player.create()
-			opponent = Player.create(human: true)
+			game = Game.create()
+			board = Board.create(size: 3, game_id: game.id)
+			player = Player.create(game_id: game.id)
+			opponent = Player.create(game_id: game.id)
 			board.spaces.each do |space|
 				if space.index == 4
 					player.spaces << space
@@ -127,35 +129,6 @@ describe "player" do
 			expect(player.first_move.index).to eq(0)
 		end	
 	end
-
-	describe "#second_move" do
-		let (:board) {Board.create(size: 3)}
-		let (:game) {Game.create()}
-		let (:player) {Player.create(game_id: game.id)}
-		let (:opponent) {Player.create(game_id: game.id)}
-
-		it "chooses the top right corner for its second turn if it went first and it is available" do
-			board.spaces.each do |space|
-				if space.index == 0 
-					player.spaces << space
-				end
-				if space.index == 1
-					opponent.spaces << space
-				end
-			end 
-			expect(player.second_move.index).to eq(2)
-		end	
-
-		it "takes the bottom left corner for its second turn if it went first and top right is not available" do
-			board.spaces.each do |space|
-				if space.index == 0 
-					player.spaces << space
-				end
-				if space.index == 2
-					opponent.spaces << space
-				end
-			end 
-			expect(player.second_move.index).to eq(6)
-		end
+	describe "#spaces_needed" do
 	end
 end

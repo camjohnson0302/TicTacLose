@@ -5,41 +5,33 @@ Tic Tac Toe that you will never win.
 
 
 
-- cascade destroy board, log winner, refactor out any space.last etc
-
-- make_spaces spec doesnt test for correct indexes
-
-- refactor js absolutely last
 
 
-- probably fix view
 
-- fix up css, get rid of absolute position if possible
 
-- game.winning_sets Needs to be abtracted out. Also, potential clarity issue?
 
-- color, human necessary for player migration?
+Todo
+==========
+- cascade destroy board, log winner, refactor out any space.last etc ?
+
+- make_spaces spec doesn't test for correct indexes
+
+- fix up css, get rid of absolute position
+
+- make it responsive, just for fun?
+
+- refactor tests
 
 - view test?
 
+- refactor js...possibly just render from post route?
+
+- composition test for player.take_turn 
+
+- game.winning_sets Needs to be abtracted out. Also, better name?
+
 - feature test?
 
-- could probably extract more methods
+- practice rewriting git history/writing good commit messages/logically grouping commits on feature branches
 
-- refactor tests?
-
-- test player.take_turn ?
-
--refactor fork methods
-
--oop set up right?
-
-- first move, second move need abstraction
-
-- remove human rewuirement from all moves
-
-- remove hardcoding in first moves?
-
-- first move, second move refactoring AND DONT WORK
-
-- possible case statement in take turn
+- remove hard coding in has_corner, block_corner_fork
