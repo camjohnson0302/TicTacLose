@@ -1,13 +1,10 @@
 require 'spec_helper'
-# require_relative '../../app/models/space.rb'
-# require_relative '../../app/models/space'
+
 describe "board" do
 
 	let(:board) { Board.new(size: 3) }
 
-
-
-	describe "#make_spaces" do
+	describe "#make_spaces" do 
 		
 		let(:board) { Board.new(size: 3) }
 		
@@ -23,11 +20,10 @@ describe "board" do
 		
 		let(:board) { Board.create(size: 3) }
 		
-		it "has spaces once it is created" do
-			expect(board.spaces.count).to eq(board.size**2)
+		it "has spaces proportional to its size once it is created" do
+			expect(board.spaces.length).to eq(board.size**2)
 		end
 	end
-
 
 	describe "#available_space?" do
 		

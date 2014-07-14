@@ -7,7 +7,7 @@ class Board < ActiveRecord::Base
 
   def make_spaces
   	(0...self.size**2).each do       
-  		self.spaces << Space.create(index: Space.where("board_id = ?", self.id).count) 	
+  		self.spaces << Space.create(index: self.spaces.length)	
   	end
   end
 
@@ -15,9 +15,7 @@ class Board < ActiveRecord::Base
 
   def available_space?
   	self.spaces.each do |space|
-  		if space.player_id.nil?
-  			return true 
-  		end
+  		return true if space.available?
   	end
   	false
   end

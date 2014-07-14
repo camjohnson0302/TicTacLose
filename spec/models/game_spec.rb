@@ -39,9 +39,4 @@ describe "game" do
 			expect(game.over?).to eq(false)
 		end 
 	end
-
-
-
-
-
 end
