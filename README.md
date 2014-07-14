@@ -14,7 +14,7 @@ Tic Tac Toe that you will never win.
 
 - probably fix view
 
-- fix up css, get rid of absolute position of possible
+- fix up css, get rid of absolute position if possible
 
 - game.winning_sets Needs to be abtracted out. Also, potential clarity issue?
 
@@ -40,6 +40,6 @@ Tic Tac Toe that you will never win.
 
 - remove hardcoding in first moves?
 
-- first move, second move refactoring
+- first move, second move refactoring AND DONT WORK
 
 - possible case statement in take turn

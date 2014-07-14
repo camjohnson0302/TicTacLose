@@ -19,4 +19,9 @@ class Board < ActiveRecord::Base
   	end
   	false
   end
+
+  def available_spaces
+    self.spaces.select{|space| space.available?}.map{|space| space.index}
+  end
+
 end

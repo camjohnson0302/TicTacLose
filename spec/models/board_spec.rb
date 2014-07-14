@@ -38,4 +38,14 @@ describe "board" do
 			expect(board.available_space?).to eq(false)	
 		end
 	end
+
+	describe "#available_spaces" do
+		
+		let(:board) {Board.create(size:2)}
+
+	  it "returns an array of available indices" do
+	  	board.spaces.last.player = Player.create()
+			expect(board.available_spaces).to eq([0,1,2])
+		end
+	end
 end
