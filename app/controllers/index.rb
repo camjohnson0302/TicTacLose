@@ -21,9 +21,9 @@ post '/' do
 	
 
 	unless @game.over?
-		choice = @robot.select_response
+		choice = @robot.take_turn
 
-		if @robot.win?
+		if @robot.wins?
 			return {:gameOver => true, :index => choice.index}.to_json
 		end
 		{:gameOver => false, :index => choice.index}.to_json
