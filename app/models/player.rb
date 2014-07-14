@@ -3,7 +3,7 @@ class Player < ActiveRecord::Base
   has_many :spaces, inverse_of: :player
   has_many :wins, class_name: :games
 
-  def take_turn
+  def take_turn!
   	if self.win
   		best_move = self.win
   	elsif self.block
@@ -14,8 +14,10 @@ class Player < ActiveRecord::Base
       best_move = self.block_corner_fork
   	elsif self.block_fork
   		best_move = self.block_fork
-  	elsif self.spaces.empty?
-  		best_move = self.first_move
+    elsif self.spaces.empty?
+      best_move = self.first_move
+    elsif self.take_center
+      best_move = self.take_center  
   	else
   		best_move = self.first_open_space
   	end
@@ -131,6 +133,14 @@ class Player < ActiveRecord::Base
         return Space.where("index = ?",7).last
       end
     end
+    nil
+  end
+
+  def take_center
+    if Space.where("index = ?",4).last.available?
+      return Space.where("index = ?",4).last
+    end
+    nil
   end
 
   def has_corner
