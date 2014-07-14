@@ -10,7 +10,7 @@ $(document).ready(function() {
         var index = response.index
   			$("[data-index = "+index+"]").css("background-color","blue");
           if (response.gameOver == true){
-            $('#you_lose').css("visibility","visible");
+            $('#failure_message').css("visibility","visible");
           }
       });
     };
