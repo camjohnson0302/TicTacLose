@@ -20,7 +20,7 @@ describe "game" do
 			game.players << Player.create()
 			board.spaces.each do |space|
 				if space.index == 2 || 5 || 8
-					game.players.first.spaces << space #law of demeter?
+					game.players.first.spaces << space
 				end
 			end 
 			expect(game.over?).to eq(true)
@@ -39,9 +39,4 @@ describe "game" do
 			expect(game.over?).to eq(false)
 		end 
 	end
-
-
-
-
-
 end

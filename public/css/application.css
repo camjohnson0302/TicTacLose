@@ -1,15 +1,15 @@
-td {
+.board td {
 	height:100px;
 	width:100px;
 	border:5px solid black;
 	background-color: white;
 }
 
-table{
+.board table{
 	margin: 0 auto;
 }
 
-h1{
+#failure_message{
 	text-align: center;
 	visibility:hidden;
 }
@@ -22,7 +22,7 @@ h1{
 	height:100px;
 }
 
-.i_quit{
+.forfeit{
 	position: absolute;
 	top:100px;
 	right:100px;
@@ -30,7 +30,7 @@ h1{
 	height:100px;
 }
 
-.container {
+.board_container {
 	display:block;
   margin: 20px auto;
   width: 400px;

@@ -1,12 +1,14 @@
 
-<div><h1 id="you_lose">You Can't Win.</h1><div>
+<div>
+	<h1 id = "failure_message">You Can't Win.</h1>
+<div>
 
 
 <div>
 
 	<input type = "submit" class = "you_first" value = "You First" formmethod="post" formaction="/">
 
-	<div class = "container">
+	<div class = "board_container">
 		<table class="board">
 			<%count = 0%>
 		  <% (1..@game.board.size).each do |x| %>
@@ -20,8 +22,7 @@
 		</table>
 	</div>
 	
-	<a href="/new"><input type = "submit" class = "i_quit" value = "I Give Up" formmethod="get" formaction="/"></a>
-
+	<a href="/"><input type = "submit" class = "forfeit" value = "I Give Up" formmethod="get" formaction="/"></a>
 </div>
 
 
