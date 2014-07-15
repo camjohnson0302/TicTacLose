@@ -3,8 +3,7 @@ class CreateSpaces < ActiveRecord::Migration
   	create_table :spaces do |t|
       t.integer :player_id
       t.integer :board_id
-      t.integer :X
-      t.integer :y
+      t.integer :index
       t.timestamps
     end
   end

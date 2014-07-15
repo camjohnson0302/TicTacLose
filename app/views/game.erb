@@ -1,13 +1,27 @@
-<table class="board">
-  <% (1..@board.size).each do |x| %>
-    <tr>
-      <% (1..@board.size).each do |y| %>
-        <td class="row_<%=x%> column_<%=y%>"></td>
-      <%end%>
-    </tr>
-  <%end%>
-</table>
+
+<div><h1 id="you_lose">You Can't Win.</h1><div>
 
 
+<div>
+
+	<input type = "submit" class = "you_first" value = "You First" formmethod="post" formaction="/">
+
+	<div class = "container">
+		<table class="board">
+			<%count = 0%>
+		  <% (1..@game.board.size).each do |x| %>
+		  	<tr>
+		      <% (1..@game.board.size).each do |y| %>
+		        <td data-index = "<%=count%>"></td>
+		        <%count+=1%>
+		      <%end%>
+		    </tr>
+		  <%end%>
+		</table>
+	</div>
+	
+	<a href="/new"><input type = "submit" class = "i_quit" value = "I Give Up" formmethod="get" formaction="/"></a>
+
+</div>
 
 
