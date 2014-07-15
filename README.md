@@ -3,8 +3,7 @@ TicTacLose
 
 Tic Tac Toe that you will never win.
 
-
-
+Yes, it was a silly decision to involve a database before having any need to persist data.
 
 
 
