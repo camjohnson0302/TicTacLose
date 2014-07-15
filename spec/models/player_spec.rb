@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "player" do
+	
 	describe "#wins?" do
 		it "returns true when the player has a complete row" do
 			board = Board.create(size: 3)
