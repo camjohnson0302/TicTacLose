@@ -16,6 +16,8 @@ Todo
 
 - make_spaces spec doesn't test for correct indexes
 
+- few more tests needed in general for player model
+
 - fix up css, get rid of absolute position
 
 - make it responsive, just for fun?
@@ -34,4 +36,4 @@ Todo
 
 - practice rewriting git history/writing good commit messages/logically grouping commits on feature branches
 
-- remove hard coding in has_corner, block_corner_fork
+- remove hard coding if possible
