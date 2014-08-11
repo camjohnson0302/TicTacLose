@@ -1,3 +1,16 @@
+take logic out of player model
+decouple .lasts
+computer player 
+
+only board.open_space
+
+remove activerecord?
+
+
+
+
+
+
 TicTacLose
 ==========
 
